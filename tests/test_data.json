@@ -1,0 +1,169 @@
+{
+  "project": {
+    "id": "alpha-23984",
+    "meta": {
+      "created": "2025-05-01T12:34:56Z",
+      "tags": ["nlp", "json", "extraction", {"dynamic": true}],
+      "owner": {
+        "name": "Nelson",
+        "contact": {
+          "email": "n@example.com",
+          "slack": null,
+          "subscribed": false
+        }
+      },
+      "status": "active"
+    },
+    "data": {
+      "documents": [
+        {
+          "doc_id": "001",
+          "title": "Natural language processing",
+          "synopsis": "This document introduces the concept of Natural Language Processing (NLP), focusing on how machines parse and interpret human language. It provides a foundational understanding of textual analysis in computational systems.",
+          "metadata": {
+            "length": 73,
+            "language": "en",
+            "revisions": [1, 2, 3],
+            "flags": {
+              "reviewed": true,
+              "flagged": false
+            }
+          },
+          "chapters": [
+            "Chapter 1: Introduction to NLP",
+            "Chapter 2: Syntax and Parsing",
+            "Chapter 3: Semantics and Context",
+            "Chapter 4: Applications in Industry"
+          ]
+        },
+        {
+          "doc_id": "002",
+          "title": "Machine learning models",
+          "synopsis": "This document discusses the requirements for training machine learning models in NLP tasks, emphasizing the need for annotated corpora to enable accurate learning and performance in real-world applications.",
+          "metadata": {
+            "length": 62,
+            "language": "en",
+            "revisions": [],
+            "flags": {}
+          },
+          "chapters": [
+            "Chapter 1: The Role of Training Data",
+            "Chapter 2: Annotation Strategies",
+            "Chapter 3: Model Evaluation Techniques",
+            "Chapter 4: Common Pitfalls and Solutions"
+          ]
+        },
+        {
+          "doc_id": "003",
+          "title": "Knowledge graph models",
+          "synopsis": "This document explores the role of knowledge graphs in representing semantic relationships between entities. It emphasizes their utility in improving search relevance, data linking, and reasoning within AI-driven systems.",
+          "metadata": {
+            "length": 95,
+            "language": "en",
+            "revisions": [1],
+            "flags": {
+              "reviewed": false,
+              "flagged": true
+            }
+          },
+          "chapters": [
+            "Chapter 1: What Are Knowledge Graphs?",
+            "Chapter 2: Entity and Relationship Modeling",
+            "Chapter 3: Querying and Reasoning",
+            "Chapter 4: Use Cases in Search and AI"
+          ]
+        },
+        {
+          "doc_id": "004",
+          "title": "Text Classification",
+          "synopsis": "This document outlines the principles of text classification as a supervised learning task. It explains how models are trained on labeled data to automatically categorize new textual inputs based on learned patterns.",
+          "metadata": {
+            "length": 86,
+            "language": "en",
+            "revisions": [1, 2],
+            "flags": {
+              "reviewed": true,
+              "flagged": false
+            }
+          },
+          "chapters": [
+            "Chapter 1: Fundamentals of Text Classification",
+            "Chapter 2: Model Architectures and Input Formats",
+            "Chapter 3: Labeling and Dataset Construction",
+            "Chapter 4: Accuracy, Bias, and Performance Tuning"
+          ]
+        }
+      ],
+      "notes": [
+        "Check encoding issues in document 003.",
+        {
+          "note": "Text extraction module may break on malformed JSON.",
+          "priority": "high",
+          "resolved": false
+        },
+        [
+          "Nested note structure here",
+          {
+            "deep": {
+              "nested": {
+                "comment": "Test recursive text extraction at this depth",
+                "tags": ["deep", "recursion", "edge-case"]
+              }
+            }
+          }
+        ]
+      ]
+    },
+    "auditTrail": {
+      "events": [
+        {
+          "type": "edit",
+          "actor": "system",
+          "timestamp": "2025-05-01T14:00:00Z",
+          "changes": {
+            "field": "status",
+            "from": "pending",
+            "to": "active"
+          }
+        },
+        {
+          "type": "comment",
+          "actor": "reviewer",
+          "timestamp": "2025-05-02T08:21:10Z",
+          "message": {
+            "text": "Consider removing deprecated tags.",
+            "context": {
+              "documentId": "001",
+              "line": 5,
+              "suggestedFix": {
+                "action": "delete",
+                "target": ["deprecated"]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "config": {
+      "processing": {
+        "enableCache": true,
+        "retryPolicy": {
+          "maxRetries": 3,
+          "backoff": {
+            "strategy": "exponential",
+            "initialDelayMs": 200
+          }
+        },
+        "features": {
+          "tokenization": {
+            "enabled": true,
+            "lang": ["en", "de", "fr"]
+          },
+          "entityRecognition": {
+            "enabled": false
+          }
+        }
+      }
+    }
+  }
+}
