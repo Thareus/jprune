@@ -223,7 +223,3 @@ class JPrune:
     def extract_text(self, data, paths):
         result = self.filter(data, keep_paths=paths)
         return self.collapse_to_string(result)
-    
-
-jp = JPrune("tests/test_data.json")
-print(sorted(jp.get_paths(jp.data)))
