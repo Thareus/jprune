@@ -12,44 +12,25 @@ jp = JPrune("tests/test_data.json")
 
 ## jp.show_paths()
 
-project
-
-project.auditTrail
-
-project.auditTrail.events
-
-project.auditTrail.events.actor
-
-project.auditTrail.events.changes
-
-project.auditTrail.events.changes.field
-
-project.auditTrail.events.changes.from
-
-project.auditTrail.events.changes.to
-
-project.auditTrail.events.message
-
-project.auditTrail.events.message.context
-
-project.auditTrail.events.message.context.documentId
-
-project.auditTrail.events.message.context.line
-
-project.auditTrail.events.message.context.suggestedFix
-
-project.auditTrail.events.message.context.suggestedFix.action
-
-project.auditTrail.events.message.context.suggestedFix.target
-
-project.auditTrail.events.message.text
-
-project.auditTrail.events.timestamp
-
-project.auditTrail.events.type
-
-project.config
-
+project  
+project.auditTrail  
+project.auditTrail.events  
+project.auditTrail.events.actor  
+project.auditTrail.events.changes  
+project.auditTrail.events.changes.field  
+project.auditTrail.events.changes.from  
+project.auditTrail.events.changes.to  
+project.auditTrail.events.message  
+project.auditTrail.events.message.context  
+project.auditTrail.events.message.context.documentId  
+project.auditTrail.events.message.context.line  
+project.auditTrail.events.message.context.suggestedFix  
+project.auditTrail.events.message.context.suggestedFix.action  
+project.auditTrail.events.message.context.suggestedFix.target  
+project.auditTrail.events.message.text  
+project.auditTrail.events.timestamp  
+project.auditTrail.events.type  
+project.config  
 ... etc ...
 
 ## jp.show_schema()
